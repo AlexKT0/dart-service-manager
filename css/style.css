@@ -1,0 +1,873 @@
+/* указываем шрифты для сайта , размер 15 px */
+* {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+
+/* контейнер отступы снизу и сбоку - право и лево  */
+.container {
+    padding: 0 80px;
+}
+
+/* Убираем подчеркивание со всех ссылок   */
+a :hover {
+    text-decoration: none;
+}
+/* убрали при наведение на кнопку синее выделение   */
+button:focus,
+div:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* ----------------------------------Promo section----------------------------------  */
+
+.title {
+    /* Easy & Useful (загаловок) и другие элементы , задали параметры .. сделали общий класс */
+    color: #061e37;
+    font-weight: 600;
+    font-size: 45px;
+    text-align: center;
+    /*Центрируем текст*/
+}
+/* Project Management Tool (подзагаловок), задали параметры .. сделали общий класс */
+.subtitle {
+    text-align: center;
+    /*Центрируем текст*/
+    color: #b0bec5;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 16px;
+}
+/*описание - задали параметры .. сделали общий класс */
+.descr {
+    color: #b0bec5;
+    line-height: 25px;
+    text-align: center;
+    /*Центрируем текст*/
+    width: 560px;
+    /* Задаем ширину блока описание*/
+    margin: 24px auto 0;
+    /* Центрируем блок // 24px отступ */
+
+}
+
+/* background: url(../img/bg/promo_bg.jpg) center center/cover no-repeat; - бэкграунд код команда всегда по центру и никогда не повторяется   */
+/* min-height: 750px; - минимальная высота   */
+/*padding: 50px 0 ; отступ у логотипа сверху - низ 50 пикселей  - право и лево 0 */
+
+.promo {
+    min-height: 750px;
+    background: url("../img/bg/promo_bg.jpg") center center/cover no-repeat;
+    padding: 50px 0;
+}
+/*МЕНЮ*/
+
+/* 
+    display        : flex; ставим все элементы друг за другом
+    justify-content: space-between;   расположили элементы >меню посередине  >кнопка справа >лого слева
+    */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*МЕНЮ*/
+
+/* Переместили текст у лого 
+    display    : flex; флекс модель
+    align-items: center;  выравниваем блок
+*/
+.logo__wrap {
+    display: flex;
+    align-items: center;
+}
+
+/* отступ от лого в право  */
+.logo__img {
+    margin-right: 10px;
+}
+
+/* настройки лого тектса 
+    text-transform: uppercase; Слова верхнего регистра
+    line-height   : 15px; расстояние между словами
+
+    
+    */
+.logo__text {
+
+    color: #ffffff;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    /* У казываем настройки у элемента "service manager"  который в теге <span> */
+}
+
+.logo__text > span {
+    font-weight: 700;
+}
+/* выравнили элементы */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+/* убрали точки от тега <li> */
+.nav__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*
+  margin    : 25px; Сделали отступы меджу словами в меню
+  opacity   : 0.85; прозрачность
+  transition: opacity 0.3s ease;  ставим плавный переход при наведение
+ */
+.nav__item {
+    margin: 25px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+.nav__item_margin-none {
+    margin-right: 0;
+}
+/* при наведение на ссылку в меню она становится менее прозрачной */
+.nav__item:hover {
+    opacity: 1;
+}
+/* 
+     color      : #ffffff; окрашиваем ссылки внутри меню
+     font-weight: 600; увеличели шрифт */
+.nav__item > a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/*Кнопка
+padding         : 6px  20px ; отступ от краев кнопки сверпху 6 сбоку 20
+background-color: transparent;  делаем кнопку прозрачной
+border-radius   : 2px; толщина линий кнопки
+border          : 1px solid #ffffff; цвет
+*/
+.promo__sign button {
+    padding: 6px 20px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 12px;
+}
+/* при нажатий на кнопку убераем оутлайн */
+.promo__sign button :focus {
+    outline: none;
+}
+
+/*Наполнение шапки*/
+/*.promo__content  в нем элементы шапки
+    display        : flex; выравниваем в один ряд
+    margin-top     : 169px;отступ сверху 169 пикселей
+    justify-content: space-between; расскидывает блоки по краям
+    align-items    : center; сделали что бы разложить элименты равномерно
+    */
+.promo__content {
+    display: flex;
+    margin-top: 169px;
+    justify-content: space-between;
+    align-items: center;
+}
+/* настройки блока текст 
+ width: 45%; сжимаем до 45% */
+.promo__text {
+    width: 45%;
+}
+/* настройки блока текст lorem Ipsum Dolor sit amet
+
+h1.promo__title указал что только с этим элементом H1 . но как понял не обязательно 
+  */
+
+h1.promo__title {
+    color: #ffffff;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 65px;
+    text-transform: uppercase;
+
+}
+/* line-height: 35px; высота шрифта
+    opacity: 0.8; прозрачность шрифта*/
+.promo__descr {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 35px;
+    opacity: 0.8;
+}
+/* Работаем с кнопками 
+margin-top: 38px; отодвинули от текста
+
+*/
+.promo__btns {
+    margin-top: 38px;
+}
+
+/* стилизуем 2 кновки сразу 
+border     : none; убрали каемку с кнопки
+font-weight: 700; размер текста
+box-shadow : 0 5px 5px rgba(0, 0, 0, 0.15); поствили тень
+ uppercase
+text-transform: uppercase; Все символы текста становятся прописными (верхний регистр).
+transition    : all 0.3s ease;  замедление эффекта при наведений на кнопку
+*/
+.promo__btn {
+    width: 150px;
+    height: 55px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    transition: all 0.3s ease;
+}
+/* .promo__btns_black:hover при наведений меняется цвет  */
+.promo__btns_black:hover {
+    background-color: #ffffff;
+    color: #061e37;
+}
+
+.promo__btns_white:hover {
+    background-color: #061e37;
+    color: #ffffff;
+}
+/* стилизуем черную кнопку
+ margin-right: 30px; отступ от другой кнопки
+*/
+.promo__btns_black {
+    background-color: #061e37;
+    color: white;
+    margin-right: 30px;
+}
+/* стилизуем белую кнопку */
+.promo__btns_white {
+    background-color: #ffffff;
+    color: #061e37;
+}
+/* стилизуем ВИДЕО 
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); делаем тень у видео
+border    : 1px solid #061e37; границы
+
+*/
+.promo__video {
+    position: relative;
+}
+.promo__video > video {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: 1px solid #061e37;
+}
+/* кнопка play */
+
+.promo__play {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 75px);
+    width: 150px;
+    text-align: center;
+    color: #061e37;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.promo__play > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #061e37;
+    margin: 0 auto;
+}
+
+/* окрасили кнопку в белый цвет */
+.promo__play > div > i {
+    color: white;
+}
+/* ----------------------------------THE END Promo section----------------------------------  */
+/*  ----------------------------------SECTION useful---------------------------------- */
+
+.useful {
+    min-height: 800px;
+    padding: 100px 0;
+}
+
+.useful___content {
+    margin-top: 95px;
+    /*отступ от описания */
+    display: flex;
+    /*в линию */
+    justify-content: space-between;
+    /*раздвигаем элементы по краям */
+
+}
+
+.useful__item {
+    /*Ширина блока*/
+    width: 27%;
+}
+
+.useful__icon {
+    text-align: center;
+    margin-bottom: 45px;
+    /*отступ иконки от текста*/
+}
+.useful__icon > i {
+    font-size: 80px;
+
+}
+
+.useful__title {
+    text-align: center;
+    color: #061e37;
+    font-size: 20px;
+    font-weight: 700;
+}
+.useful_descr {
+    text-align: center;
+    color: #78909c;
+    line-height: 20px;
+}
+
+/*Цвет иконок */
+.fa-calendar-alt {
+    color: #b388ff;
+
+}
+
+.fa-user {
+    color: #80d8ff;
+}
+
+.fa-fire-alt {
+    color: #ea80fc;
+}
+
+.useful__btn {
+    display: block;
+    /*кнопка  строчная а надо блочную */
+    width: 150px;
+    height: 55px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: #1de9b6;
+    border: none;
+    /*убрали обводку у кнопки */
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* все буквы капслоком */
+    margin: 78px auto 0;
+    /*78px (Сверху) auto (справа) 0 (снизу) auto (слева)*/
+    transition: all 0.3s ease;
+    /* замедление при наведение */
+}
+
+.useful__btn:hover {
+    background-color: #17b68e;
+    /* меняем цвет при наведение  */
+}
+/*  ----------------------------------THE END   SECTION useful---------------------------------- */
+
+/*  ----------------------------------PROGRESS---------------------------------- */
+.progress {
+    display: flex;
+}
+
+.progress__item {
+    width: 25%;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    /*центрируем текст в блоке*/
+    justify-content: center;
+    /*размещение по середине */
+    align-items: center;
+    /*размещение элемонтов на одной оси*/
+}
+
+.progress__item_business {
+    background-color: #80d8ff;
+}
+.progress__item_business i {
+    color: #80d8ff;
+}
+
+.progress__item_downloads {
+    background-color: #82b1ff;
+}
+.progress__item_downloads i {
+    color: #82b1ff;
+}
+.progress__item_installs {
+    background-color: #b388ff;
+}
+.progress__item_installs i {
+    color: #b388ff;
+}
+.progress__item_user {
+    background-color: #ea80fc;
+}
+.progress__item_user i {
+    color: #ea80fc;
+}
+
+.progress_wrap {
+
+    display: flex;
+    align-items: center;
+}
+.progress_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    /* делаем круг из квадрата */
+    margin-right: 23px;
+    /*отступ*/
+
+}
+
+.progress_text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.progress_icon > i {
+    font-size: 30px;
+    /*размер иконок */
+}
+
+/*  ----------------------------------Конец PROGRESS---------------------------------- */
+
+/*  ----------------------------------Секция 4---------------------------------- */
+.service {
+    padding: 100px 0;
+    /*сверху и снизу 100 пикселей лева право по 0*/
+}
+.service__content {
+    margin-top: 48px;
+}
+/* TABS 1 */
+.tabs__item {
+    width: 800px;
+    height: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 0 auto 20px;
+    /* размещаем блоки по середине */
+    padding: 0 25px 25px;
+    display: flex;
+    flex-direction: column;
+    /*текст в колонку */
+    justify-content: space-between;
+    overflow: hidden;
+    /*Скрывает табы */
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.tabs__item_active {
+    height: 240px;
+    cursor: default;
+}
+
+.tabs__head {
+    display: flex;
+    justify-content: space-between;
+    /*Расскидываем по углам */
+    align-items: center;
+    height: 50px;
+    margin: 15px 0;
+
+}
+.tabs__wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.tabs__title {
+    color: #061e37;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 25px;
+
+}
+
+.tabs__icon > i {
+    color: #061e37;
+    font-size: 25px;
+
+}
+
+.tabs__down {
+    color: #061e37;
+    font-size: 25px;
+}
+
+.tabs__content {
+    display: flex;
+}
+
+.tabs__img {
+    width: 65%;
+    height: 155px;
+    background: url("../img/tabs/tab_image1.jpg") center center/cover no-repeat;
+    /* изображение центрируем всегда при любой ширине */
+    border-radius: 5px;
+    margin-right: 25px;
+
+}
+
+.tabs__text {
+    width: 35%;
+    color: #061e37;
+    font-weight: 600;
+    line-height: 25px;
+    /*расстояние между строками в тексте */
+    letter-spacing: 0.45px;
+    /* расстояние между буквами */
+
+}
+
+/* The end TABS 1 */
+
+/*Секция 5 отзывы*/
+.comment {
+    padding: 87px 0;
+    background: url("../img/bg/Rectangle_1_.jpg") center center/cover no-repeat;
+    min-height: 560px;
+}
+.comment__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment__title {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 50px;
+}
+.comment_descr {
+    margin-top: 19px;
+    color: #ffffff;
+    line-height: 25px;
+    width: 515px;
+}
+.comment__btn {
+    width: 150px;
+    height: 55px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: #061e37;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 78px;
+}
+
+.comment__icon {
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 100%;
+    margin-right: 50px;
+}
+
+.comment__name {
+    color: #061e37;
+    font-size: 18px;
+    font-weight: 700;
+}
+.comment__text {
+    color: #78909c;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 25px;
+    margin-top: 20px;
+
+}
+
+.comment__content {
+    width: 650px;
+    min-height: 160px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 30px;
+}
+/*Конец Секция 5 отзывы*/
+.comment__item {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+}
+/*обращаемся к последнему */
+.comment__item :last-child {
+    margin-bottom: 0;
+}
+/*  ----------------------------------Конец Секция 5---------------------------------- */
+
+/*---------------------------------- Секция 6 команда*---------------------------------- */
+.team {
+    margin-top: 100px;
+    text-align: center;
+    color: #b0bec5;
+}
+
+.team__content {
+    margin-top: 98px;
+}
+.carousel {
+    width: 850px;
+    margin: 0 auto;
+}
+.carousel__image {
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    margin: 0 auto 60px;
+}
+.carousel__name {
+    color: #061e37;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.carousel__text {
+    color: #90a4ae;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+.carousel__links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.carousel__links > a {
+    margin: 0 15px;
+}
+
+.carousel__links i {
+    color: #90a4ae;
+    font-size: 20px;
+}
+.carousel__arrow {
+    position: absolute;
+    /*позиционирование стрелок*/
+    top: 20%;
+}
+.carousel__arrow i {
+    font-size: 60px;
+}
+
+.carousel__next {
+    right: 0;
+
+}
+
+.carousel__prev {
+    left: 0;
+
+}
+/*----------------------------------Конец Секция 6 команда----------------------------------*/
+
+/*----------------------------------Секция 7 форма----------------------------------*/
+.descr_darck {
+    color: #061e37;
+}
+
+.contact {
+    background-color: #fafafa;
+    padding: 50px 0 100px;
+}
+.contact__content {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.margin__wrap {
+    margin-top: 20px;
+}
+.form__inp {
+    width: 280px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #061e37;
+    color: #061e37;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 20px;
+    margin: 7px 20px;
+
+}
+
+.form__message {
+    width: 603px;
+    height: 160px;
+    border-radius: 5px;
+    border: 1px solid #061e37;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #061e37;
+    margin: 15px 20px;
+    resize: none;
+    /* уберает изменение размера */
+
+}
+.form__send {
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form__send label {
+    display: flex;
+    align-items: center;
+    color: #061e37;
+    font-weight: 500;
+
+}
+.form__subs {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #061e37;
+
+}
+
+.form__btn {
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: #1de9b6;
+    width: 103px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.form__btn {
+    background-color: #17b68e;
+
+}
+/*----------------------------------Конец Секция 7 форма----------------------------------*/
+
+/*---------------------------------- Подвал 8 форма----------------------------------*/
+.footer {
+    padding: 100px 0;
+    background-color: #061e37;
+}
+.footer_wrop {
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+}
+.footer_first {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer__submenu {
+    display: flex;
+    align-items: center;
+
+}
+
+.footer__submenu a {
+    opacity: 0.5;
+    color: #ffffff;
+}
+
+.footer__submenu div {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    margin: 0 20px;
+}
+
+.footer_primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.footer__links a {
+    margin-left: 20px;
+}
+.footer__links i {
+    opacity: 0.2;
+    color: #ffffff;
+    font-size: 20px;
+}
+/*---------------------------------- Конец Подвал 8 форма----------------------------------*/
+
+/*---------------------------------- Всплывающее окно---------------------------------*/
+
+.popup {
+    position:fixed;
+    top:0 ;
+    left: 0;
+    width: 100% ;
+    height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6) ;
+  display: none; /* спрятал блок и буду вызывать через конопку */
+  justify-content: center;
+  align-items: center ;
+  
+}
+.popup_active {
+    display: flex; 
+}
+.popup__form {
+    width:645px;
+}
+
+.popup__wrop {
+    position: relative;
+    padding:50px ;
+    background-color: #ffffff ;
+    border-radius:6px;
+    box-shadow:0 0
+}
+
+
+
+.popup__close {
+    position: absolute;
+    font-size: 50px;
+    color: gray;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+}
+
+/*---------------------------------- КОНЕЦ Всплывающее окно---------------------------*/
